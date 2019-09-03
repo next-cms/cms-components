@@ -2,7 +2,7 @@ import React from 'react';
 
 const InfoBox = ({ icon, text }) => {
     return (
-        <p><i>icon</i> {text}</p>
+        <p>{icon} <span>{text}</span></p>
     );
 }
 
