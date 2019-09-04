@@ -3,6 +3,8 @@ import Brand from '../components/Brand'
 import InfoBox from '../components/InfoBox';
 import NavMenu from '../components/NavMenu';
 
+import 'antd/dist/antd.css';
+
 const Home = () => (
   <Fragment>
     <Brand brandName="Vivasoft"/>
