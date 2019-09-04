@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Brand = ({ brandName }) => {
+const Brand = ({ imageUrl, brandName }) => {
+
+  const img = imageUrl && <img src={imageUrl} alt="brand-logo"></img>;
+
   return (
-    <h2>{brandName}</h2>
+    <span>{img} {brandName} </span>
   );
 }
 
