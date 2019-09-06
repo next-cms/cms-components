@@ -1,10 +1,21 @@
 {
   "name": "cms-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/next-cms/cms-components.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:npm": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "start": "next start"
   },
   "dependencies": {
@@ -13,5 +24,10 @@
     "next": "9.0.5",
     "react": "16.9.0",
     "react-dom": "16.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0"
   }
 }
