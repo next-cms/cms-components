@@ -12,6 +12,8 @@
     "type": "git",
     "url": "https://github.com/next-cms/cms-components.git"
   },
+  "author": "PI-CMS",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,7 +31,6 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/core": "^7.5.5"
   }
 }
