@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 
-import 'antd/dist/antd.css';
 import App from '../src/examples/App';
 
 const Home = () => (
@@ -10,7 +9,7 @@ const Home = () => (
     </div>
 
 
-    <style jsx global>
+    <style jsx="true" global={true}>
       {`
         body {
           background-color: #3595c9;

@@ -1,5 +1,5 @@
 {
-  "name": "cms-components",
+  "name": "pi-cms-components",
   "version": "0.1.0",
   "private": false,
   "main": "dist/index.js",
@@ -21,7 +21,9 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.23.1",
+    "babel-plugin-import": "^1.12.1",
     "next": "9.0.5",
+    "null-loader": "^3.0.0",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   },
