@@ -28,11 +28,6 @@ const webpackConfig = (config, { isServer }) => {
     return config;
 };
 
-
-// module.exports = withCss(withSass({
-//     webpack: webpackConfig
-// }));
-
 module.exports = withCss({
     webpack: webpackConfig
 });

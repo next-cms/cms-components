@@ -1,6 +1,6 @@
 {
-  "name": "cms-components",
-  "version": "0.1.0",
+  "name": "pi-cms-components",
+  "version": "0.1.2",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -12,6 +12,8 @@
     "type": "git",
     "url": "https://github.com/next-cms/cms-components.git"
   },
+  "author": "PI-CMS",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,13 +23,15 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.23.1",
+    "babel-plugin-import": "^1.12.1",
     "next": "9.0.5",
+    "null-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/core": "^7.5.5"
   }
 }

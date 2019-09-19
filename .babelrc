@@ -1,5 +1,14 @@
 {
     "presets": [
-        "@babel/preset-react"
+        "next/babel"
+    ],
+    "plugins": [
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "style": "css"
+            }
+        ]
     ]
 }
