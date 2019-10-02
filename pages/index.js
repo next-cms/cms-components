@@ -9,7 +9,7 @@ const Home = () => (
     </div>
 
 
-    <style jsx="true" global={true}>
+    {/* <style jsx="true" global={true}>
       {`
         body {
           background-color: #3595c9;
@@ -17,9 +17,10 @@ const Home = () => (
         .container {
           width: 1180px;
           margin: auto;
+          height:200px;
         }
       `}
-    </style>
+    </style> */}
 
   </Fragment>
 )
