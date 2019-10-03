@@ -1,15 +1,31 @@
-import React, {Fragment} from 'react'
-import Brand from '../components/Brand'
-import InfoBox from '../components/InfoBox';
-import NavMenu from '../components/NavMenu';
+import React, { Fragment } from 'react'
 
-import 'antd/dist/antd.css';
+import App from '../src/examples/App';
+import Navigation from '../src/examples/Navigation';
 
 const Home = () => (
   <Fragment>
-    <Brand brandName="Vivasoft"/>
-    <InfoBox icon="icon" text="text"/>
-    <NavMenu/>
+    <div style={{paddingBottom: "100px"}}>
+      <Navigation />
+    </div>
+    <div className="container">
+      <App />
+    </div>
+
+
+    <style jsx="true" global={true}>
+      {`
+        body {
+          background-color: #3595c9;
+        }
+        .container {
+          width: 1180px;
+          margin: auto;
+          height:200px;
+        }
+      `}
+    </style>
+
   </Fragment>
 )
 
