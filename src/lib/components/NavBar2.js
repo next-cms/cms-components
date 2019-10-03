@@ -23,9 +23,9 @@ const Nav = () => {
                             </li>
                         </ul>
                         <div className="extra">
-                            <button className="button" style={{ marginLeft: "20px" }}>SOUMEKSI</button>
-                            <button className="button">IN ENGLISH</button>
-                            <button className="signInButton">Sign in / Register</button>
+                            <a className="button">SOUMEKSI</a>
+                            <a className="button" style={{marginRight: "37px"}}>IN ENGLISH</a>
+                            <button className="secondary-btn">SIGN IN / REGISTER</button>
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@ const Nav = () => {
                             </li>
                         </ul>
                         <div className="extra">
-                            <button className="pricing-table-button">PRICING</button>
+                            <button className="primary-button">PRICING</button>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@ const Home = () => (
           background-color: #3595c9;
         }
         .container {
-          width: 80%;
+          width: 1080px;
           margin: auto;
         }
       `}
