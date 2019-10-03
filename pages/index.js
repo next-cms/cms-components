@@ -19,9 +19,8 @@ const Home = () => (
           background-color: #3595c9;
         }
         .container {
-          width: 1180px;
+          width: 80%;
           margin: auto;
-          height:200px;
         }
       `}
     </style>
