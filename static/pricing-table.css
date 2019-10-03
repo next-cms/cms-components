@@ -17,13 +17,15 @@
 /* Price Table Header And Footer */
 
 .price-table-wrapper .price-table-header, .price-table-wrapper .price-table-footer {
-    padding: 0 15px;
+    padding: 0 16px;
+    cursor: pointer;
 }
 
 .price-table-wrapper .price-table-header .item-label, .price-table-wrapper .price-table-footer .item-label {
     padding: 5px;
     text-align: center;
     background-color: #ffffff;
+    transition: all 0.1s ease-in-out;
 }
 
 .price-table-wrapper .price-table-header .item-label {
@@ -43,7 +45,7 @@
 /* Column Active */
 .price-table-wrapper .price-table-header .item-label.active, .price-table-wrapper .price-table-footer .item-label.active {
     background-color: #eaf5ff;
-    transform: scale(1.03);
+    transform: scale(1.06);
     z-index: 1;
 }
 
@@ -68,6 +70,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px dotted #000000;
+    transition: all 0.1s ease-in-out;
 }
 
 .price-table-wrapper .price-table .price-item .price-column:first-child {
@@ -96,6 +99,6 @@
     border-left: 1px solid #000000;
     border-right: 1px solid #000000;
     border-bottom: none;
-    transform: scale(1.03);
+    transform: scale(1.06);
     z-index: 1;
 }
