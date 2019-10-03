@@ -1,0 +1,101 @@
+.ant-collapse-borderless {
+    background-color: transparent;
+}
+
+.ant-collapse-borderless > .ant-collapse-item {
+    border-radius: 0;
+}
+
+.ant-collapse > .ant-collapse-item:last-child {
+    border-bottom: none;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    font-size: 15px;
+}
+
+/* Price Table Header And Footer */
+
+.price-table-wrapper .price-table-header, .price-table-wrapper .price-table-footer {
+    padding: 0 15px;
+}
+
+.price-table-wrapper .price-table-header .item-label, .price-table-wrapper .price-table-footer .item-label {
+    padding: 5px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.price-table-wrapper .price-table-header .item-label {
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-radius: 5px 5px 0 0;
+}
+
+.price-table-wrapper .price-table-footer .item-label {
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Column Active */
+.price-table-wrapper .price-table-header .item-label.active, .price-table-wrapper .price-table-footer .item-label.active {
+    background-color: #eaf5ff;
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+/* .price-table-wrapper .price-table-header .item-label.active {
+    height: 50px;
+} */
+
+
+/* Price Table Table */
+
+.price-table-wrapper .price-table {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0 15px;  
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+
+.price-table-wrapper .price-table .price-item .price-column {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dotted #000000;
+}
+
+.price-table-wrapper .price-table .price-item .price-column:first-child {
+    display: flex;
+    justify-content: start;
+}
+
+.price-table-wrapper .price-table .price-item:last-child .price-column {
+    border-bottom: none;
+}
+
+.price-table-wrapper .price-table .dot {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.price-table-wrapper .price-table .dot.fill {
+    background-color: #000000;
+}
+
+/* Column Active */
+.price-table-wrapper .price-table .price-item .price-column.active {
+    background-color: #eaf5ff;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: none;
+    transform: scale(1.03);
+    z-index: 1;
+}
