@@ -80,7 +80,11 @@ const PricingTable = () => {
         return columns.map(column => {
             return (
                 <Col key={column.id} onClick={() => columnOnClick(column)} className={`item-label ${selectedColumn === column.id ? 'active' : ''}`} sm={columnWidth}>
-                    {column.title}
+                    <div className="item-label-text">
+                        <h4>{column.title}</h4>
+                        <p>{column.subTitle}</p>
+                        <span>{column.desc}</span>
+                    </div>
                 </Col>
             )
         })

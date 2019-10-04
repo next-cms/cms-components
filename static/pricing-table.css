@@ -21,37 +21,77 @@
     cursor: pointer;
 }
 
-.price-table-wrapper .price-table-header .item-label, .price-table-wrapper .price-table-footer .item-label {
-    padding: 5px;
-    text-align: center;
-    background-color: #ffffff;
-    transition: all 0.1s ease-in-out;
+.price-table-wrapper .price-table-header .item-label {
+    position: relative;
+    height: 68px;
+    line-height: 15px;
 }
 
-.price-table-wrapper .price-table-header .item-label {
+
+.price-table-wrapper .price-table-header .item-label .item-label-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #ffffff;
     border-top: 1px solid #000000;
     border-left: 1px solid #000000;
     border-right: 1px solid #000000;
-    border-radius: 5px 5px 0 0;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+.price-table-wrapper .price-table-header .item-label .item-label-text h4 {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.price-table-wrapper .price-table-header .item-label .item-label-text p {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.price-table-wrapper .price-table-header .item-label .item-label-text span {
+    color: #000000;
+    font-size: 10px;
+    font-weight: 600;
 }
 
 .price-table-wrapper .price-table-footer .item-label {
+    background-color: #ffffff;
+    padding: 10px 5px;
+    text-align: center;
     border-bottom: 1px solid #000000;
     border-left: 1px solid #000000;
     border-right: 1px solid #000000;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 20px 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Column Active */
-.price-table-wrapper .price-table-header .item-label.active, .price-table-wrapper .price-table-footer .item-label.active {
+
+.price-table-wrapper .price-table-header .item-label.active .item-label-text {
+    height: 100px;
     background-color: #eaf5ff;
     transform: scale(1.06);
     z-index: 1;
 }
 
-/* .price-table-wrapper .price-table-header .item-label.active {
-    height: 50px;
-} */
+.price-table-wrapper .price-table-footer .item-label.active {
+    background-color: #eaf5ff;
+    transform: scale(1.06);
+    z-index: 1;
+}
 
 
 /* Price Table Table */
@@ -61,7 +101,7 @@
     background-color: #ffffff;
     padding: 0 15px;  
     border: 1px solid #000000;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .price-table-wrapper .price-table .price-item .price-column {
@@ -70,7 +110,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px dotted #000000;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .price-table-wrapper .price-table .price-item .price-column:first-child {
