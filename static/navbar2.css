@@ -2,29 +2,37 @@
 /* Button */
 
 .secondary-btn {
+    min-width: 180px;
     background: white;
     color: #000000;
     font-size: 12px;
     font-family: Arial;
     font-weight: bold;
     text-decoration: none;
-    padding: 5px 32px;
+    padding: 3px 0;
     margin-left: 15px;  
     border: 1px solid #000000;
     border-radius: 24px;
     cursor: pointer;
 }
 
+.btn-lg {
+    padding: 7px 0;
+    min-width: 235px;
+    font-size:14px;
+}
+
 .primary-button {
+    min-width: 180px;
     background-color:#7955FF;
 	border-radius: 28px;
 	display: inline-block;
 	cursor: pointer;
 	color:#ffffff;
 	font-family: Arial;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
-	padding: 10px 53px;
+	padding: 8px 0;
     text-decoration: none;
     border: none;
 }
@@ -34,7 +42,7 @@
 /* Header  */
 
 .header {
-    background: linear-gradient(178.5deg, rgba(7,49,177,1) 0%, rgba(7,44,157,1) 0%, rgba(7,16,48,1) 52%, rgba(239,239,241,1) 55%);
+    background: linear-gradient(179deg, rgba(7,16,48,1) 50%, transparent 51%);
 }
 
 .main-menu {
@@ -47,7 +55,7 @@
 
 .nav-menu {
     width: calc(100% - 140px);
-    padding-left: 20px;
+    margin-left: 40px;
 }
 
 .nav-menu .nav-item {
@@ -73,7 +81,7 @@
 
 .nav-menu .nav-item ul li {
     display: inline-block;
-    margin: 0 16px;
+    margin: 0 17px;
 }
 
 .nav-menu .nav-item.nav-item.nav-two ul li {
@@ -86,8 +94,8 @@
     display: flex;
     color: #ffffff;
     font-weight: bold;
-    font-size: 12px;
-    padding: 5px 0; 
+    font-size: 0.7rem;
+    padding: 6px 0; 
 }
 
 .nav-menu .nav-item.nav-one ul li a::after {
@@ -108,7 +116,7 @@
     position: absolute;
     display: block;
     content: "";
-    width: 40%;
+    width: 50px;
     border-bottom: 3px dotted #ffffff;
     bottom: 0;
     left: 0;
@@ -118,7 +126,7 @@
     display: flex;
     color: #071a57;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 0.9rem;
 }
 
 .nav-menu .nav-item .extra a {
@@ -127,5 +135,121 @@
     font-size: 12px;
     font-weight: bold;
 
+}
+
+.bar {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #1E1540;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    z-index: 9999999999;
+}
+
+.mobile-menu-content {
+    width: 100%;
+}
+
+.nav-one-mobile-menu {
+    position: relative;
+    padding: 20px 0;
+}
+
+.close-icon {
+    position: absolute;
+    right: 0;
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer; 
+    color: white; 
+}
+
+.mobile-logo-text {
+    padding: 0;
+    margin: 0;
+    font-weight: 800;
+    font-size: 13px;
+    color: #ffffff
+}
+
+.nav-two-mobile-menu {
+    background-color: #EAF5FF; 
+    clip-path: polygon(0 2.5%, 100% 0, 100% 97.5%, 0% 100%);
+}
+
+.nav-two-mobile-menu ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav-two-mobile-menu ul li {
+    padding: 10px 0;
+}
+
+.nav-two-mobile-menu ul li a {
+    color: #1E1540;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-three-mobile-menu ul {
+    padding: 20px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-three-mobile-menu ul li {
+    padding: 10px 0;
+}
+
+.nav-three-mobile-menu ul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.active-mobile-nav {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        background: linear-gradient(179deg, rgba(7,16,48,1) 75%, transparent 76%);
+        height: 80px;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .logo {
+        width: 80px;
+        margin: 0 25px;
+    }
+    .bar {
+        display: block;
+        padding: 15px 5px;
+
+    }
+    .main-menu {
+        justify-content: space-between;
+    }
+    
 }
 

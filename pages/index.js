@@ -19,7 +19,8 @@ const Home = () => (
           background-color: #3595c9;
         }
         .container {
-          width: 1080px;
+          width: 95%;
+          max-width: 1280px;
           margin: auto;
         }
       `}
