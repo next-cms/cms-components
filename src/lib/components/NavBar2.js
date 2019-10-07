@@ -1,7 +1,8 @@
 import React, { useState, Fragment } from "react";
 import "../../../static/navbar2.css";
 import { Icon } from "antd";
-import ContactForm from "./ContactForm";
+import WrappedContactForm from "./ContactForm";
+import WrappedEventCreateForm from "./EventCreateForm";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -135,7 +136,8 @@ const Nav = () => {
           </div>
         </div>
       </header>
-      <ContactForm />
+      <WrappedContactForm />
+      <WrappedEventCreateForm/>
     </Fragment>
   );
 };

@@ -1,8 +1,24 @@
 import React from "react";
 import "../../../static/contactForm.css";
-import { Icon } from "antd";
+import {
+  Icon, 
+  Form,
+  Input,
+  Button
+} from "antd";
 
-const ContactForm = () => {
+const ContactForm = props => {
+  
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.form.validateFieldsAndScroll((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+      }
+    });
+  };
+
+  const { getFieldDecorator } = props.form;
   return (
     <div className="main">
       <div className="container">
@@ -79,6 +95,42 @@ const ContactForm = () => {
               <div className="submit-btn">
                 <button className=" primary-button">SUBMIT</button>
               </div>
+
+              {/* <Form className="form" layout="vertical" onSubmit={handleSubmit}>
+                <Form.Item
+                  label={
+                    <span>
+                      Nickname&nbsp;
+                  </span>
+                  }
+                >
+                  {getFieldDecorator('nickname', {
+                    rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+                  })(<Input />)}
+                </Form.Item>
+                <Form.Item label="E-mail">
+                  {getFieldDecorator('email', {
+                    rules: [
+                      {
+                        type: 'email',
+                        message: 'The input is not valid E-mail!',
+                      },
+                      {
+                        required: true,
+                        message: 'Please input your E-mail!',
+                      },
+                    ],
+                  })(<Input />)}
+                </Form.Item>
+
+
+                <Form.Item style={{ textAlign: "center" }}>
+                  <Button type="primary" htmlType="submit">
+                    Register
+                  </Button>
+                </Form.Item>
+              </Form> */}
+
             </div>
           </div>
           <div>image</div>
@@ -87,5 +139,5 @@ const ContactForm = () => {
     </div>
   );
 };
-
-export default ContactForm;
+const WrappedContactForm = Form.create({ name: 'register' })(ContactForm);
+export default WrappedContactForm;

@@ -59,11 +59,11 @@
 
 .form-details input {
   width: 100%;
-  box-sizing: border-box;
   border: none;
   border-bottom: 2px solid black;
   background-color: transparent;
   margin-bottom: 20px;
+  outline: none;
 }
 
 .social-icons {
