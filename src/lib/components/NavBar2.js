@@ -3,6 +3,8 @@ import "../../../static/navbar2.css";
 import { Icon } from "antd";
 import WrappedContactForm from "./ContactForm";
 import WrappedEventCreateForm from "./EventCreateForm";
+import EventsList from "./EventsList";
+import News from "./News";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -138,6 +140,8 @@ const Nav = () => {
       </header>
       <WrappedContactForm />
       <WrappedEventCreateForm/>
+      <EventsList/>
+      <News/>
     </Fragment>
   );
 };

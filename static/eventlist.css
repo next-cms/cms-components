@@ -1,0 +1,10 @@
+.ant-card{
+    border: none;
+    margin-top: 50px;
+}
+.ant-card-body{
+    padding: 0px; 
+}
+.news-container{
+    background-color: white;
+}

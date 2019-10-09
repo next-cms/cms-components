@@ -46,6 +46,15 @@ const EventCreateForm = props =>{
                 rules: [{ required: true, message: 'Please input the event title!', whitespace: true }],
             })(<Input />)}
             </Form.Item>
+            {/* <Form.Item label="Description">
+            {getFieldDecorator('description', {
+                rules: [
+                {
+                    required: true,
+                    message: 'Please input the event description!',
+                },
+                ],
+            })(<textarea />)} */}
             <Form.Item label="Description">
             {getFieldDecorator('description', {
                 rules: [
@@ -54,7 +63,12 @@ const EventCreateForm = props =>{
                     message: 'Please input the event description!',
                 },
                 ],
-            })(<textarea />)}
+            })(<Editor
+                editorState={editorState}
+                wrapperClassName="demo-wrapper"
+                editorClassName="demo-editor"
+                onEditorStateChange={onEditorStateChange}
+            />)}
             </Form.Item>
 
             <Form.Item label="Event Date[when]">
@@ -77,19 +91,19 @@ const EventCreateForm = props =>{
                 <CategoryTag getTag={getTags} /> 
             </Form.Item>
 
-            <Form.Item>
-            <Editor
-        editorState={editorState}
-        wrapperClassName="demo-wrapper"
-        editorClassName="demo-editor"
-        onEditorStateChange={onEditorStateChange}
-      />
-            </Form.Item>
+            {/* <Form.Item>
+                <Editor
+                    editorState={editorState}
+                    wrapperClassName="demo-wrapper"
+                    editorClassName="demo-editor"
+                    onEditorStateChange={onEditorStateChange}
+                />
+            </Form.Item> */}
 
             <Form.Item>
-            <Button type="primary" htmlType="submit">
-                Create Event
-            </Button>
+                <Button type="primary" htmlType="submit">
+                    Create Event
+                </Button>
             </Form.Item>
         </Form>
         </div>
