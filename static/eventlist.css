@@ -3,8 +3,12 @@
     margin-top: 50px;
 }
 .ant-card-body{
-    padding: 0px; 
+    padding: 0px !important; 
 }
 .news-container{
     background-color: white;
+}
+.DraftEditor-root{
+    background-color: #fff;
+    height: 130px;
 }

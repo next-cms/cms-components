@@ -2,65 +2,13 @@ import React from 'react';
 import { List, Card, Icon } from 'antd';
 import "../../../static/eventlist.css"
 
-const AllNews = () => {
-    const news = [
-        {
-            key: 1,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO SYSTEMS - CASE KOJAMO SYSTEMS - CASE KOJAMO SYSTEMS - CASE KOJAMO",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Quis viverra nibh cras pulvinar mattis nunc. Luctus venenatis lectus magna fringilla. Urna condimentum mattis pellentesque id nibh tortor. Adipiscing diam donec adipiscing tristique risus nec feugiat. Malesuada nunc vel risus commodo viverra maecenas. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Suspendisse interdum consectetur libero id faucibus. Lacus suspendisse faucibus interdum posuere lorem. Quam pellentesque nec nam aliquam. At quis risus sed vulputate. Sit amet consectetur adipiscing elit. ",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-        {
-            key: 2,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO",
-            description: "Lorem Ipsum",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-        {
-            key: 3,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO",
-            description: "Lorem Ipsum",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-        {
-            key: 4,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO",
-            description: "Lorem Ipsum",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-        {
-            key: 5,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO",
-            description: "Lorem Ipsum",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-        {
-            key: 6,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO",
-            description: "Lorem Ipsum",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-        {
-            key: 7,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO",
-            description: "Lorem Ipsum",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-        {
-            key: 8,
-            title: "COMBINING DATA FROM MULTIPLE SYSTEMS - CASE KOJAMO",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Quis viverra nibh cras pulvinar mattis nunc. Luctus venenatis lectus magna fringilla. Urna condimentum mattis pellentesque id nibh tortor. Adipiscing diam donec adipiscing tristique risus nec feugiat. Malesuada nunc vel risus commodo viverra maecenas. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Suspendisse interdum consectetur libero id faucibus. Lacus suspendisse faucibus interdum posuere lorem. Quam pellentesque nec nam aliquam. At quis risus sed vulputate. Sit amet consectetur adipiscing elit. ",
-            date: "10/01/2019",
-            tag: "Business"
-        },
-    ]
+const AllNews = ({ news }) => {
+
+    const tagColor = {
+        business: "#5ECE60",
+        future: "#FFB2CA",
+        society: "#4BC9F2"
+    }
 
     const itemRender = (current, type, originalElement) => {
         if (type === 'prev') {
@@ -91,7 +39,7 @@ const AllNews = () => {
                             <div>
                                 <a href="#" style={{ color: "black", textDecoration: "underline", fontStyle: "italic" }}>Read More</a>
                             </div>
-                            <div><a style={{ color: "green", fontWeight: "1000", textTransform: "uppercase" }}>{news[news.length - 1].tag}</a></div>
+                            <div><a style={{ color: tagColor[news[news.length - 1].tag.toLowerCase()], fontWeight: "1000", textTransform: "uppercase" }}>{news[news.length - 1].tag}</a></div>
                         </div>
                     </div>
                 </div>
@@ -122,7 +70,7 @@ const AllNews = () => {
                                         <div>
                                             <a style={{ color: "black", textDecoration: "underline", fontStyle: "italic" }}>Read More</a>
                                         </div>
-                                        <div><a style={{ color: "green", fontWeight: "1000", textTransform: "uppercase" }}>{item.tag}</a></div>
+                                        <div><a style={{ color: tagColor[item.tag.toLowerCase()], fontWeight: "1000", textTransform: "uppercase" }}>{item.tag}</a></div>
                                     </div>
                                 </Card>
                             </List.Item>
