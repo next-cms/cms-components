@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { List, Card, Icon } from 'antd';
 import "../../../static/eventlist.css"
+import News from './News';
 
-const AllNews = ({ news }) => {
+const AllNews = ({ news, onTabChange }) => {
 
     const tagColor = {
         business: "#5ECE60",
@@ -20,6 +21,8 @@ const AllNews = ({ news }) => {
         return originalElement;
     }
 
+    const [newsFeed, setNewsFeed] = useState(news);
+
     return (
         <div>
             <div className="news-container" >
@@ -29,24 +32,24 @@ const AllNews = ({ news }) => {
                     </div>
                     <div style={{ width: "50%", height: "380px", padding: "0px 30px" }}>
                         <div style={{ padding: "20px 0px", }}>
-                            <h2>{news[news.length - 1].title}</h2>
+                            <h2>{newsFeed[newsFeed.length - 1].title}</h2>
                         </div>
-                        <p style={{ fontStyle: "italic", marginBottom: "0px" }}>{news[news.length - 1].date} | 5 min read</p>
+                        <p style={{ fontStyle: "italic", marginBottom: "0px" }}>{newsFeed[newsFeed.length - 1].date} | 5 min read</p>
                         <div style={{ height: "270px", marginTop: "10px" }}>
-                            <p style={{ fontSize: "18px", display: "-webkit-box", lineHeight: "2.3", WebkitLineClamp: "6", WebkitBoxOrient: "vertical", overflow: "hidden" }}>{news[news.length - 1].description}</p>
+                            <p style={{ fontSize: "18px", display: "-webkit-box", lineHeight: "2.3", WebkitLineClamp: "6", WebkitBoxOrient: "vertical", overflow: "hidden" }}>{newsFeed[newsFeed.length - 1].description}</p>
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between" }}>
                             <div>
                                 <a href="#" style={{ color: "black", textDecoration: "underline", fontStyle: "italic" }}>Read More</a>
                             </div>
-                            <div><a style={{ color: tagColor[news[news.length - 1].tag.toLowerCase()], fontWeight: "1000", textTransform: "uppercase" }}>{news[news.length - 1].tag}</a></div>
+                            <div><a id={newsFeed[newsFeed.length - 1].tag} onClick={(e) => onTabChange(e.target.id)} style={{ color: tagColor[newsFeed[newsFeed.length - 1].tag.toLowerCase()], fontWeight: "1000", textTransform: "uppercase" }}>{newsFeed[newsFeed.length - 1].tag}</a></div>
                         </div>
                     </div>
                 </div>
                 <div>
                     <List
                         grid={{ gutter: 40, column: 4 }}
-                        dataSource={news}
+                        dataSource={newsFeed}
                         pagination={{
                             pageSize: 8,
                             itemRender
@@ -70,7 +73,7 @@ const AllNews = ({ news }) => {
                                         <div>
                                             <a style={{ color: "black", textDecoration: "underline", fontStyle: "italic" }}>Read More</a>
                                         </div>
-                                        <div><a style={{ color: tagColor[item.tag.toLowerCase()], fontWeight: "1000", textTransform: "uppercase" }}>{item.tag}</a></div>
+                                        <div><a id={item.tag} onClick={(e) => onTabChange(e.target.id)} style={{ color: tagColor[item.tag.toLowerCase()], fontWeight: "1000", textTransform: "uppercase" }}>{item.tag}</a></div>
                                     </div>
                                 </Card>
                             </List.Item>

@@ -4,6 +4,7 @@ import AllNews from './AllNews';
 
 const News = () => {
     const { TabPane } = Tabs;
+    const [activeTab, setActiveTab] = useState("All");
 
     const news = [
         {
@@ -67,9 +68,14 @@ const News = () => {
     const [newsPortals, setNewsPortals] = useState(news);
 
     const tags = [...new Set(news.map(item => item.tag))]
-    console.log("tags: ", tags);
 
-    const onTabChange = (activeKey) => {
+    const onTabChange = (tab) => {
+        setActiveTab(tab);
+        setNewsPortals(news.filter(n => n.tag === tab));
+    }
+
+    const onTabChangeFilter = (activeKey) => {
+        setActiveTab(activeKey);
         if (activeKey === "All") {
             setNewsPortals(news);
         } else {
@@ -81,14 +87,14 @@ const News = () => {
         <div>
             <div className="container">
                 <div className="card-container" style={{ margin: "20px 0" }}>
-                    <Tabs type="card" onChange={(activeKey) => onTabChange(activeKey)}>
+                    <Tabs activeKey={activeTab} type="card" onChange={(activeKey) => onTabChangeFilter(activeKey)}>
 
                         <TabPane tab="All News" key="All">
-                            <AllNews news={newsPortals} />
+                            <AllNews onTabChange={onTabChange} news={newsPortals} />
                         </TabPane>
                         {tags.map(tag =>
                             <TabPane tab={tag} key={tag}>
-                                <AllNews news={newsPortals} />
+                                <AllNews news={newsPortals} onTabChange={onTabChange} />
                             </TabPane>
                         )}
                     </Tabs>
