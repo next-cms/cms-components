@@ -1,0 +1,77 @@
+/*footer {
+	clip-path: polygon(0% 13.5%, 100% 0%, 100% 100%, 0% 100%);
+}
+*/
+
+footer ul {
+	padding-left: 0px;
+}
+
+footer ul li {
+    margin-bottom: 12px;
+}
+
+footer ul li a {
+	color: #1e1540;
+	font-size: 15px;
+}
+
+footer .second-part {
+	margin-top: 15px;
+}
+
+footer .second-part ul li a {
+	font-weight: 900;
+}
+
+.desktop-footer {
+	display: none;
+}
+
+.desktop-footer .footer-content {
+	padding-top: 30px;
+}
+
+.desktop-footer footer ul li {
+    margin-bottom: 20px;
+}
+
+.desktop-footer .footer-share-buttons i {
+	font-size: 24px;
+}
+
+.desktop-footer .footer-share-buttons .linkedin-share i {
+	color: #0077B5;
+}
+
+.desktop-footer .footer-share-buttons .twitter-share i {
+	color: #1DA1F2;
+}
+
+.desktop-footer .footer-share-buttons .facebook-share i {
+	color: #3B5CA0;
+}
+
+.desktop-footer .footer-share-buttons .youtube-share i {
+	color: #FF0000;
+}
+
+.desktop-footer .footer-share-buttons .github-share i {
+	color: #24292E;
+}
+
+@media screen and (min-width: 768px) {
+	.desktop-footer {
+		display: block;
+	}
+
+	.desktop-footer footer ul li a  {
+	    color: #1e1540;
+	    font-weight: 900;
+		font-size: 12px;
+	}
+
+	.mobile-footer {
+		display: none;
+	}
+}

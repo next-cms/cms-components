@@ -1,14 +1,14 @@
 import React from "react";
 import "../../../static/contactForm.css";
 import {
-  Icon, 
+  Icon,
   Form,
   Input,
   Button
 } from "antd";
 
 const ContactForm = props => {
-  
+
   const handleSubmit = e => {
     e.preventDefault();
     props.form.validateFieldsAndScroll((err, values) => {
@@ -65,9 +65,9 @@ const ContactForm = props => {
               </div>
             </div>
           </div>
-          <div className="form">
-            <div className="form-details">
-              <div>
+          <div className="form" >
+            <div style={{ backgroundColor: "whitesmoke" }}>
+              {/* <div>
                 <h4>INTERESTED IN BECOMING A PARTNER?</h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -75,8 +75,8 @@ const ContactForm = props => {
                   augue purus. Mauris vehicula aliquam mi sed iaculis. Praesent
                   at dapibus odio.
                 </p>
-              </div>
-              <label>NAME</label>
+              </div> */}
+              {/* <label>NAME</label>
               <br />
               <input type="text" name="name" />
               <br />
@@ -94,20 +94,46 @@ const ContactForm = props => {
               <br />
               <div className="submit-btn">
                 <button className=" primary-button">SUBMIT</button>
-              </div>
+              </div> */}
 
-              {/* <Form className="form" layout="vertical" onSubmit={handleSubmit}>
+              <Form className="form-details" layout="vertical" onSubmit={handleSubmit}>
+                <h5>INTERESTED IN BECOMING A PARTNER?</h5>
+                <p>
+                  Have a data gathering service or know how to use data to gain valuable insight? Leave your contact info and we'll get in touch!
+                </p>
                 <Form.Item
                   label={
                     <span>
-                      Nickname&nbsp;
+                      Name
                   </span>
                   }
                 >
-                  {getFieldDecorator('nickname', {
-                    rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+                  {getFieldDecorator('name', {
+                    rules: [{ required: true, message: 'Please input your name!', whitespace: true }],
                   })(<Input />)}
                 </Form.Item>
+                <Form.Item label="Company">
+                  {getFieldDecorator('company', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input your company!',
+                      },
+                    ],
+                  })(<Input />)}
+                </Form.Item>
+
+                <Form.Item label="Phone">
+                  {getFieldDecorator('phone', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input your phone!',
+                      },
+                    ],
+                  })(<Input />)}
+                </Form.Item>
+
                 <Form.Item label="E-mail">
                   {getFieldDecorator('email', {
                     rules: [
@@ -123,13 +149,12 @@ const ContactForm = props => {
                   })(<Input />)}
                 </Form.Item>
 
-
-                <Form.Item style={{ textAlign: "center" }}>
-                  <Button type="primary" htmlType="submit">
-                    Register
+                <Form.Item>
+                  <Button className="form-submit-btn" size="large" type="primary" htmlType="submit" shape="round">
+                    SUBMIT
                   </Button>
                 </Form.Item>
-              </Form> */}
+              </Form>
 
             </div>
           </div>

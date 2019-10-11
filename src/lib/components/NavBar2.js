@@ -5,6 +5,8 @@ import WrappedContactForm from "./ContactForm";
 import WrappedEventCreateForm from "./EventCreateForm";
 import EventsList from "./EventsList";
 import News from "./News";
+import ContactUs from "./ContactUs";
+import ContentCreationForm from "./ContentCreationForm";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -138,10 +140,12 @@ const Nav = () => {
           </div>
         </div>
       </header>
-      <WrappedContactForm />
-      <WrappedEventCreateForm/>
-      <EventsList/>
-      <News/>
+      {/* <WrappedContactForm />
+      <WrappedEventCreateForm />
+      <EventsList />
+      <News /> */}
+      {/* <ContactUs /> */}
+      <ContentCreationForm />
     </Fragment>
   );
 };

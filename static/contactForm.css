@@ -1,7 +1,6 @@
 .main {
   width: 100%;
   background-color: rgba(7, 16, 48, 1);
-  height: 400px;
   clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -35,35 +34,55 @@
   font-size: 10px;
 }
 .form {
-  width: 30%;
+  width: 40%;
+  padding: 25px 10px;
+  padding-bottom: 40px;
+
 }
 .form-details {
-  background-image: linear-gradient(
-    180.2deg,
-    white 91.2%,
-    rgba(7, 16, 48, 1) 83.3%
-  );
-  padding: 20px 20px;
-  margin: 20px 0;
-  font-size: 9px;
+  padding: 0px 20px;
+  color: #1e1540;
 }
 
-.form-details h4 {
-  font-weight: 800;
+.form-details h5 {
+  font-size: 14px;
+  font-weight: 900;
 }
 
-.form-details label {
+.form .form-details label {
   color: rgba(7, 16, 48, 1);
-  font-weight: 800;
+  font-weight: 900;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
-.form-details input {
+.form .form-details input {
   width: 100%;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid #929598;
   background-color: transparent;
-  margin-bottom: 20px;
   outline: none;
+  height: 20px;
+  border-radius: 0;
+  padding:0px 0px;
+}
+.form .form-details label{
+  padding: 0px 0px 0px;
+}
+.ant-form-vertical .ant-form-item-label{
+  padding: 0 0 0;
+}
+.form .form-details input:focus {
+  border-color: inherit;
+  outline: none;
+  border-right-width: 0;
+  box-shadow: none;
+}
+
+.form .form-details input:hover{
+  border-color: #929598;
+  border-right-width: 0;
+  box-shadow: none;
 }
 
 .social-icons {
@@ -77,7 +96,7 @@
   cursor: pointer;
 }
 
-.primary-button {
+/* .primary-button {
   min-width: 130px;
   background-color: #7955ff;
   border-radius: 28px;
@@ -90,9 +109,25 @@
   padding: 8px 0;
   text-decoration: none;
   border: none;
+} */
+
+.form-submit-btn {
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%) translateY(10px);
+  font-weight: 900;
+  min-width: 130px;
+  background-color: #7955ff;
+  padding: 8px 0;
+  border: none;
 }
 
-.submit-btn {
-  text-align: center;
-  margin-top: 20px;
+.form-submit-btn:hover{
+  background-color: #7955ff;
+}
+
+@media screen and (max-width: 768px) {
+    .form-submit-btn {
+        transform: translateX(-50%);
+    }
 }

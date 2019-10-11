@@ -1,64 +1,135 @@
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #1b3c70;
-    overflow: hidden;
-    width: 100%;
-    height: 110px;
-    text-align: center;
-    background-image: linear-gradient(#20208a);
-    clip-path: polygon(0 1%, 100% 0, 100% 57%, 0% 100%);
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: none;
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    margin-top: 20px;
-    padding: 4px 10px;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: Arial;
-    font-weight: bold;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    border-bottom: 3px dotted white;
-    color: white;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-    display: none;
-  }
-  #div2{
-    position: absolute;
-    margin-top:-109px;
-    margin-left: 300px;
-  
-  }
-  .button{
-    background-color: Transparent;
-    background-repeat:no-repeat;
+.site-navigation {
+	background: linear-gradient(179deg, #1E1540 74%, transparent 75%);
+}
+.navbar {
+    padding: 0;
+}
+
+.site-navigation .navbar-brand {
+	padding: 0px;
+}
+
+.site-navigation .navbar-brand img {
+    width: 85px;
+}
+
+.navbar-toggler i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.navbar-toggler {
     border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: white;
-  }
-  .signInButton{
-    border-radius: 60px;
-    padding: 5px 40px;
-    text-align:    center;
-    margin-left: 55px;
+    margin-top: -25px;
+}
+
+.navigation-collapse {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    text-align: center;
     font-weight: bold;
-    background-color: #f2f2f2;
-  }
+    text-transform: uppercase;
+    display: none;
+}
+
+.navigation-collapse ul {
+    padding-left: 0px;
+}
+
+.navigation-collapse .nav-link {
+    color: #fff;
+    padding: 0.75rem 1rem;
+}
+
+.main-nav-part {
+    padding: 10px 0px;
+    clip-path: polygon(0% 4%, 100% 0, 100% 96%, 0% 100%);
+    margin: 2px 0px;
+}
+
+.main-nav-part .nav-link {
+	color: #1E1540;
+	padding: .6rem 1rem;
+	font-size: 18px;
+}
+
+button.nav-close {
+    position: absolute;
+    right: 65px;
+    top: 3px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+/* desktop navlink */
+
+.top-nav .btn-authentication {
+    line-height: 22px;
+    font-size: 11px;
+}
+
+.top-nav .nav-link {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.75px;
+    color: #fff;
+}
+
+.main-nav .nav-link {
+	color: #1E1540;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: .5rem 1.5rem;
+}
+
+/* responsive navigation */
+@media screen and (min-width: 768px) {
+	.mobile-nav { 
+		display: none;
+	}
+	.site-navigation {
+		background: linear-gradient(179deg, #1E1540 50%, transparent 51%);
+	}
+
+	.navbar {
+		 padding: 1rem; 
+	}
+
+	.site-navigation .navbar-brand img {
+		width: auto;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	/* Top Nav */
+	.top-nav {
+		margin-bottom: 30px;
+	}
+
+	.top-nav ul, .main-nav ul {
+	    display: inline-block;
+	    margin-bottom: 0px;
+	}
+
+	.top-nav ul li, .main-nav ul li {
+	    display: inherit;
+	    list-style: none;
+	}
+
+	.main-nav {
+	    margin-left: 150px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.desktop-nav { 
+		display: none;
+	}
+}

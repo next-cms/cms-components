@@ -1,0 +1,103 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+/* Typography */
+
+body {
+	font-family: 'Lato', sans-serif;
+    font-size: 13px;
+	font-weight: 400;
+}
+
+p {
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.page-title {
+    font-size: 58px;
+    font-weight: 300;
+}
+
+.section-title {
+	font-size: 39px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+/* Background */
+
+.bg-light {
+	background-color: #EAF5FF !important;
+}
+
+.bg-dark {
+	background-color: #1E1540 !important;
+}
+
+.bg-dark .section-title, .bg-dark .page-title {
+	color: #fff;
+}
+
+.bg-light .section-title, .bg-light .page-title {
+	color: #1e1540;
+}
+
+
+
+/* Form Input */
+
+.form-control:focus {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Buttons */
+
+.btn {
+	border-radius: 30px;
+	font-weight: bold;
+	text-align: center;
+    text-transform: uppercase;
+}
+
+.default-site-btn {
+	background-color: #7955FF;
+	color: #fff;
+}
+
+.default-site-btn-o {
+	border: 1px solid #1E1540;
+	background-color: #fff;
+	color: #1E1540;
+}
+
+.btn-small {
+	padding: 0px 27px;
+}
+
+.btn-medium {
+	padding: 6px 55px;
+}
+
+button:focus, button:hover {
+    outline: none;
+}
+
+/* Others */
+
+li {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Responsive Issue */
+
+@media screen and (min-width: 768px) {
+	
+}
